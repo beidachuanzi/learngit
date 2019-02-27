@@ -16,7 +16,7 @@ mkdir learngit
 
 添加文件到Git仓库，分两步：
 第一步，用命令git add告诉Git，把文件添加到仓库：
-第二步，用命令git commit告诉Git，把文件提交到仓库
+第二步，用命令git commit告诉Git，把文件提交到仓库   git commit -m "update"
 简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。
 嫌麻烦不想输入-m "xxx"行不行？确实有办法可以这么干，但是强烈不建议你这么干，因为输入说明对自己对别人阅读都很重要。实在不想输入说明的童鞋请自行Google，我不告诉你这个参数。
 
@@ -37,3 +37,14 @@ git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新�
 命令git checkout -- readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销
 
 
+把本地仓库的内容推送到GitHub仓库。
+git remote add origin git@github.com:beidachuanzi/learngit.git
+添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+下一步，就可以把本地库的所有内容推送到远程库上：
+git push -u origin master
+从现在起，只要本地作了提交，就可以通过命令：
+$ git push origin master
+
+ 
+ 
+ 
